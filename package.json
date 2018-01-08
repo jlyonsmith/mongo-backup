@@ -1,0 +1,25 @@
+{
+  "name": "mongo-backup",
+  "version": "1.0.0",
+  "description": "MongoDB automated backup tool with Slack integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "mongodb",
+    "backup"
+  ],
+  "author": "John Lyon-Smith",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.0.4"
+  }
+}
