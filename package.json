@@ -1,18 +1,41 @@
 {
   "name": "mongo-backup",
   "version": "1.0.0",
-  "description": "MongoDB automated backup tool with Slack integration",
-  "main": "index.js",
+  "description": "A tool for backing up MongoDB databases integrated with Slack and Amazon S3",
+  "bin": {
+    "mongo-backup": "dist/mongo-backup.js"
+  },
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
-    "test": "jest"
+    "build": "babel src -d dist -s --ignore *.test.js",
+    "debug:snap": "babel-node --inspect-brk src/mongo-backup.js",
+    "test": "jest",
+    "test:debug": "babel-node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "node_modules/",
+      "scratch/"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlyonsmith/mongo-backup.git"
   },
   "keywords": [
     "mongodb",
-    "backup"
+    "backup",
+    "s3",
+    "slack"
   ],
   "author": "John Lyon-Smith",
   "license": "MIT",
-  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/jlyonsmith/mongo-backup/issues"
+  },
+  "homepage": "https://github.com/jlyonsmith/mongo-backup#readme",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
@@ -21,5 +44,10 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "jest": "^22.0.4"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "minimist": "^1.2.0",
+    "temp": "^0.8.3"
   }
 }
