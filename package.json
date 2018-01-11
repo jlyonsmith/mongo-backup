@@ -46,8 +46,12 @@
     "jest": "^22.0.4"
   },
   "dependencies": {
+    "@slack/client": "^3.15.0",
     "chalk": "^2.3.0",
     "minimist": "^1.2.0",
+    "moment": "^2.20.1",
+    "mongodb": "^3.0.1",
+    "mongodb-uri": "^0.9.7",
     "temp": "^0.8.3"
   }
 }
